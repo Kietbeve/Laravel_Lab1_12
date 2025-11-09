@@ -12,11 +12,21 @@ class HomeController extends Controller
     }
     //view home
     public function viewHome(){
-        $product=new Product();
-        $product->id=1;
-        $product->name="San pham 1";
+        $viewData = [];
+        $viewData["title"] = "Trang chu - Online Store";
 
-        return view("pages.home",["product"=>$product]);
+        return view('pages.home')->with("viewData", $viewData);
+    }
+    //view about
+    public function viewAbout()
+    { 
+       $viewData = [];
+        $viewData["title"] = "Gioi thieu - Online Store";
+        $viewData["subtitle"] = "Gioi thieu";
+        $viewData["description"] = "Day la trang gioi thieu!";
+        $viewData["author"] = "Phat trien boi: OnlyU"; 
+        return view('pages.about')->with("viewData", $viewData);
+    
     }
     //view contact
     public function viewContact(Request $request){

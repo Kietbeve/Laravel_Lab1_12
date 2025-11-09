@@ -1,3 +1,7 @@
-<h1>Day la trang home</h1>
-<p>id: {{$product->id}}</p>
-<p>name: {{$product->name}}</p>
+@extends('layouts.layout')
+@section('title', 'Trang chu - Online Store')
+@section('content')
+<div class="text-center"> 
+ Chao mung den voi ung dung Online Store!
+</div>
+@endsection

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/hello',[HomeController::class,"hello"]);
+Route::get('/hello', [HomeController::class,"hello"]);
 //home
-Route::get('/',[HomeController::class,"viewHome"])->name("home");
+Route::get('/', [HomeController::class,"viewHome"])->name("home");
 //about
-Route::get('/about',[HomeController::class,"viewAbout"])->name("about");
+Route::get('/about', [HomeController::class,"viewAbout"])->name("about");
 //contact
+
+// ds product
+Route::get('/products', [ProductController::class,"index"])->name("product.index");
+// chi tiet product
+Route::get('/products/{id}', [ProductController::class,"show"])->name("product.show");
 
 Route::get('/contact/{name}', [HomeController::class,"viewContact"]);

@@ -21,6 +21,7 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="{{route("home")}}">Home</a>
                     <a class="nav-link active" href="{{route("about")}}">About</a>
+                    <a class="nav-link active" href="{{ route('product.index') }}">Products</a>
                 </div>
             </div>
         </div>
